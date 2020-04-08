@@ -7,7 +7,7 @@ use warnings;
 # Allows trailing bases at the end of the barcode sequence but requires barcodes to begin from the first base in the barcode sequence.
 
 if (@ARGV != 6) { 
-print STDERR "perl 1_Flexible_UMI_Demultiplexing.pl read1.fq read2.fq b_structure index mismatch prefix\n";
+print STDERR "perl Flexible_UMI_Demultiplexing.pl read1.fq read2.fq b_structure index mismatch prefix\n";
 print STDERR "
 		read1.fq : barcode/umi containing read
 		read2.fq : non-barcode containing read
