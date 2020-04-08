@@ -1,0 +1,24 @@
+**FastQ**
+
+>ReadID
+READ SEQUENCE
++
+SEQUENCING QUALITY SCORES
+
+**BAM**
+
+The human-readable version is called a SAM file, while the BAM file is the highly compressed version.
+Alignment rows employ a standard format with the following columns:
+QNAME : read name (generally will include UMI barcode if applicable)
+FLAG : number tag indicating the “type” of alignment, link to explanation of all possible “types”
+RNAME : reference sequence name (i.e. chromosome read is mapped to).
+POS : leftmost mapping position
+MAPQ : Mapping quality
+CIGAR : string indicating the matching/mismatching parts of the read (may include soft-clipping).
+RNEXT : reference name of the mate/next read
+PNEXT : POS for mate/next read
+TLEN : Template length (length of reference region the read is mapped to)
+SEQ : read sequence
+QUAL : read quality
+BAM/SAM files can be converted to the other format using ‘samtools’
+
