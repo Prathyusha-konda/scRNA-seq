@@ -42,7 +42,7 @@ STAR --runThreadN 4 --runMode genomeGenerate --genomeDir indices/STAR --genomeFa
 mkdir results
 mkdir results/STAR
 STAR --runThreadN 4 --genomeDir indices/STAR --readFilesIn Share/ERR522959_1.fastq Share/ERR522959_2.fastq --outFileNamePrefix results/STAR/
-STAR --runThreadN 4 --genomeDir indices/STAR --readFilesIn fastqc_trimmed_results/ERR522959_1_val_1.fastq fastqc_trimmed_results/ERR522959_2_val_2.fastq --outFileNamePrefix results/STAR/trimmed/
+STAR --runThreadN 4 --genomeDir indices/STAR --readFilesIn fastqc_trimmed_results/ERR522959_1_val_1.fq fastqc_trimmed_results/ERR522959_2_val_2.fq --outFileNamePrefix results/STAR/trimmed/
 
 #STAR is a reads aligner, whereas Kallisto is a pseudo-aligner (Bray et al. 2016). The main difference between aligners and pseudo-aligners is that whereas aligners map reads to a reference, pseudo-aligners map k-mers to a reference.
 
