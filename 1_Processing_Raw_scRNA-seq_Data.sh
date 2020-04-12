@@ -16,7 +16,9 @@ fastqc -o fastqc_results Share/ERR522959_1.fastq Share/ERR522959_2.fastq
 
 trim_galore -h
 mkdir fastqc_trimmed_results
-trim_galore --nextera -o fastqc_trimmed_results Share/ERR522959_1.fastq Share/ERR522959_2.fastq
+trim_galore --nextera -o fastqc_trimmed_results --paired Share/ERR522959_1.fastq Share/ERR522959_2.fastq
+
+fastqc -o fastqc_results fastqc_trimmed_results/ERR522959_1_trimmed.fq fastqc_trimmed_results/ERR522959_2_trimmed.fq
 
 ###Demultiplexing
 
@@ -40,6 +42,7 @@ STAR --runThreadN 4 --runMode genomeGenerate --genomeDir indices/STAR --genomeFa
 mkdir results
 mkdir results/STAR
 STAR --runThreadN 4 --genomeDir indices/STAR --readFilesIn Share/ERR522959_1.fastq Share/ERR522959_2.fastq --outFileNamePrefix results/STAR/
+STAR --runThreadN 4 --genomeDir indices/STAR --readFilesIn fastqc_trimmed_results/ERR522959_1_val_1.fastq fastqc_trimmed_results/ERR522959_2_val_2.fastq --outFileNamePrefix results/STAR/trimmed/
 
 #STAR is a reads aligner, whereas Kallisto is a pseudo-aligner (Bray et al. 2016). The main difference between aligners and pseudo-aligners is that whereas aligners map reads to a reference, pseudo-aligners map k-mers to a reference.
 
