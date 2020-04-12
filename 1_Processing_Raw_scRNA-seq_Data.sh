@@ -44,6 +44,9 @@ STAR --runThreadN 4 --genomeDir indices/STAR --readFilesIn Share/ERR522959_1.fas
 #STAR is a reads aligner, whereas Kallisto is a pseudo-aligner (Bray et al. 2016). The main difference between aligners and pseudo-aligners is that whereas aligners map reads to a reference, pseudo-aligners map k-mers to a reference.
 
 ###Using Kallisto to Align
+#download
+#https://pachterlab.github.io/kallisto/download
+#https://github.com/pachterlab/kallisto/blob/master/INSTALL.md
 
 #Kallisto index
 mkdir indices/Kallisto
