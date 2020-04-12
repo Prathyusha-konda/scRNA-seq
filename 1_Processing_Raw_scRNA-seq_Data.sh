@@ -47,6 +47,7 @@ STAR --runThreadN 4 --genomeDir indices/STAR --readFilesIn Share/ERR522959_1.fas
 #download
 #https://pachterlab.github.io/kallisto/download
 #https://github.com/pachterlab/kallisto/blob/master/INSTALL.md
+#echo "PATH=$PATH:/media/prathyusha/Data/Projects/scRNAse/kallisto" >> ~/.bashrc
 
 #Kallisto index
 mkdir indices/Kallisto
