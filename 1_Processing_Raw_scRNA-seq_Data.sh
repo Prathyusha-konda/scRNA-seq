@@ -6,7 +6,14 @@ fastqc -h #help
 mkdir fastqc_results
 fastqc -o fastqc_results Share/ERR522959_1.fastq Share/ERR522959_2.fastq
 
-#Trimming raw reads
+##Trimming raw reads
+#trim_galore needs fastqc and cutadapt
+#sudo apt install cutadapt
+#install trimgalore
+#curl -fsSL https://github.com/FelixKrueger/TrimGalore/archive/0.6.5.tar.gz -o trim_galore.tar.gz
+#tar xvzf trim_galore.tar.gz
+#export PATH=$PATH:/media/prathyusha/Data/Projects/scRNAseq/TrimGalore-0.6.5
+
 trim_galore -h
 mkdir fastqc_trimmed_results
 trim_galore --nextera -o fastqc_trimmed_results Share/ERR522959_1.fastq Share/ERR522959_2.fastq
