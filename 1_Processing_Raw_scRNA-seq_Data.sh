@@ -1,4 +1,4 @@
-https://scrnaseq-course.cog.sanger.ac.uk/website/index.html
+based on tut https://scrnaseq-course.cog.sanger.ac.uk/website/index.html
 
 ###FASTQC
 
