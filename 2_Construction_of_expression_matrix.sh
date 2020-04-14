@@ -1,3 +1,5 @@
+#From tut
+
 ###Reads QC
 
 #Assuming that our reads are in experiment.bam, we run FastQC as
